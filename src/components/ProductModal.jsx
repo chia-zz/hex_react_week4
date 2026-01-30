@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import * as bootstrap from "bootstrap";
-import { uploadImage } from "../api/Api";
 
 function ProductModal({
   // 從父層傳來
@@ -91,7 +90,7 @@ function ProductModal({
             <form>
               <div className="row text-start">
                 {/* 商品標題 */}
-                <div className="col-12 mb-2">
+                <div className="col-6 mb-2">
                   <label htmlFor="title" className="form-label">
                     商品標題
                   </label>
@@ -103,6 +102,24 @@ function ProductModal({
                     value={tempProduct.title}
                     onChange={onInputChange}
                     placeholder="請輸入商品標題"
+                  />
+                </div>
+
+                {/* 人氣指數 */}
+                <div className="col-6 mb-2">
+                  <label htmlFor="title" className="form-label">
+                    人氣指數
+                  </label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    id="trending"
+                    name="trending"
+                    value={tempProduct.trending}
+                    onChange={onInputChange}
+                    placeholder="請輸入人氣指數"
+                    min="0"
+                    max="5"
                   />
                 </div>
 

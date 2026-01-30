@@ -35,6 +35,7 @@ function ProductPage() {
     is_enabled: 1,
     imageUrl: "",
     imagesUrl: [],
+    trending: 0,
   };
 
   const [products, setProducts] = useState([]);
@@ -258,7 +259,8 @@ function ProductPage() {
         <table className="table table-hover">
           <thead>
             <tr>
-              <th>產品名稱</th>
+              <th>商品名稱</th>
+              <th>商品人氣</th>
               <th>原價</th>
               <th>售價</th>
               <th>是否啟用</th>
@@ -269,6 +271,7 @@ function ProductPage() {
             {products.map((item) => (
               <tr key={item.id}>
                 <td>{item.title}</td>
+                <td>{item.trending}</td>
                 <td>{item.origin_price}</td>
                 <td>{item.price}</td>
                 <td>

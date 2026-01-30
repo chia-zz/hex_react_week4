@@ -67,7 +67,7 @@ function DetailModal({ tempProduct, isOpen, onClose }) {
       <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header bg-dark">
-            <h5 className="modal-title text-light">產品明細</h5>
+            <h5 className="modal-title text-light">商品明細</h5>
             <button
               type="button"
               className="btn-close btn-close-white"
@@ -86,7 +86,7 @@ function DetailModal({ tempProduct, isOpen, onClose }) {
                       height: "200px",
                       objectFit: "cover",
                     }}
-                    alt={tempProduct.title || "產品圖片"}
+                    alt={tempProduct.title || "商品圖片"}
                   />
                 ) : (
                   <div
@@ -103,10 +103,11 @@ function DetailModal({ tempProduct, isOpen, onClose }) {
                     {tempProduct.category}
                   </span>
                 </h6>
-                <p>產品內容：{tempProduct.content}</p>
-                <p>產品描述：{tempProduct.description}</p>
+                <p>商品內容：{tempProduct.content}</p>
+                <p>商品描述：{tempProduct.description}</p>
+                <p>商品人氣：{tempProduct.trending}</p>
                 <p>
-                  產品售價：
+                  商品售價：
                   <del className="mx-1 text-muted">
                     {tempProduct.origin_price}
                   </del>
@@ -151,7 +152,7 @@ function DetailModal({ tempProduct, isOpen, onClose }) {
                 </div>
               </>
             ) : (
-              <p className="text-secondary">請選擇一個產品查看細節</p>
+              <p className="text-secondary">請選擇一個商品查看細節</p>
             )}
           </div>
           <div className="modal-footer">
